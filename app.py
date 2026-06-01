@@ -19,7 +19,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load model
-model = tf.keras.models.load_model("models/oral_cancer_model.h5")
+import tensorflow as tf
+
+model = tf.keras.models.load_model(
+    "models/oral_cancer_model.h5",
+    compile=False
+)
 IMG_SIZE = (224, 224)
 
 # Risk function
