@@ -18,13 +18,12 @@ st.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# Load model
-import tensorflow as tf
-
+# Load model (fixed)
 model = tf.keras.models.load_model(
     "models/oral_cancer_model.h5",
     compile=False
 )
+
 IMG_SIZE = (224, 224)
 
 # Risk function
@@ -55,7 +54,7 @@ uploaded_file = st.file_uploader("📷 Upload Oral Image", type=["jpg", "png", "
 if uploaded_file is not None:
 
     st.image(uploaded_file, caption="Oral Scan Input", use_container_width=True)
-    
+
     # preprocessing
     img = image.load_img(uploaded_file, target_size=IMG_SIZE)
     img_array = image.img_to_array(img)
@@ -73,7 +72,7 @@ if uploaded_file is not None:
     else:
         result = "✅ No Cancer Detected"
         class_id = "None"
-        risk_level = "None"
+        risk_level = "Low"
         treatment = "Just Regular Checkup"
         color = "#28a745"
 
