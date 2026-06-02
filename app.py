@@ -20,7 +20,7 @@ st.markdown("""
 
 # Load model (fixed)
 model = tf.keras.models.load_model(
-    "models/oral_cancer_model.h5",
+    "models/oral_cancer_model.keras",
     compile=False
 )
 
