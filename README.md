@@ -24,8 +24,6 @@ This project is an AI-powered Oral Cancer Detection system built using Deep Lear
 3. CNN Model Prediction
 4. Display Result
 
-## Live Demo
-[Paste Your Streamlit Link Here]
 
 ## Future Improvements
 - Improve prediction accuracy
